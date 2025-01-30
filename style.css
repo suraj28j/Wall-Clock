@@ -11,7 +11,9 @@
     border-radius: 50%;
     position: relative;
     margin: 10% 40%;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .clock span{
@@ -24,4 +26,36 @@
 .clock span b{
     transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
+}
+
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    width: 3px;
+    background-color: #000000;
+}
+
+#hour i{
+    height: 65px;
+}
+#min i{
+    height: 80px;
+}
+#sec i{
+    height: 95px;
 }
